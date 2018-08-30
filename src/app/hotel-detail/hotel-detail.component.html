@@ -1,0 +1,11 @@
+
+
+<div *ngIf="hotel$ | async as hotel">
+  <h1> {{hotel.name}}</h1>
+  <h3>{{hotel.price}}</h3>
+  <h6>{{hotel.stars}}</h6>
+  <img [src]="hotel.image">
+  <div class="amenities-container">
+    <span *ngFor="let amenity of hotel.amenities" class="tumbnail-amenities"><img [src]="amenity"></span>
+  </div>
+</div>
